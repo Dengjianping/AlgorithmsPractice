@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\LinkedList">
+      <UniqueIdentifier>{41afb6f2-741e-4a41-af4a-ae6bd7f3e306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BinaryTree">
+      <UniqueIdentifier>{2c5184ef-acc4-48e3-97d2-bd26d4c018e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DoubleLinkedList">
+      <UniqueIdentifier>{c5050382-717f-4f8e-9c41-a16b5df5397d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\QuickSort">
+      <UniqueIdentifier>{ba85d9b6-a2f6-49bc-830a-44255347af5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BasicSort">
+      <UniqueIdentifier>{2b7feb52-7343-4db3-bbd8-10dc7b028850}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MergeSort">
+      <UniqueIdentifier>{0eaeced7-3a3e-49f2-918b-51814a6c307c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Recursion">
+      <UniqueIdentifier>{232e3cac-02a1-49ba-b4a4-d25ba37bb090}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="linkedlist.h">
+      <Filter>Header Files\LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithms.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="binarytree.h">
+      <Filter>Header Files\BinaryTree</Filter>
+    </ClInclude>
+    <ClInclude Include="doublelinkedlist.h">
+      <Filter>Header Files\DoubleLinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="quicksort.h">
+      <Filter>Header Files\QuickSort</Filter>
+    </ClInclude>
+    <ClInclude Include="insertsort.h">
+      <Filter>Header Files\BasicSort</Filter>
+    </ClInclude>
+    <ClInclude Include="mergesort.h">
+      <Filter>Header Files\MergeSort</Filter>
+    </ClInclude>
+    <ClInclude Include="basicrecursion.h">
+      <Filter>Header Files\Recursion</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamicprogramming.h">
+      <Filter>Header Files\Recursion</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="linkedlist.cpp">
+      <Filter>Header Files\LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="binarytree.cpp">
+      <Filter>Header Files\BinaryTree</Filter>
+    </ClCompile>
+    <ClCompile Include="doublelinkedlist.cpp">
+      <Filter>Header Files\DoubleLinkedList</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
