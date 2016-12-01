@@ -6,9 +6,9 @@ using namespace std;
 template <typename Type>
 void initArray(Type* a, int N)
 {
-    for size_t i = 0; i < N; i++)
+    for (size_t i = 0; i < N; i++)
     {
-        a[i] = (Type)rand() % 20;
+        a[i] = (Type)rand() % 30;
     }
 }
 
@@ -24,7 +24,7 @@ void showArray(Type* a, int N)
 }
 
 template <typename Type>
-void swapValue(Type & x, Type & x)
+void swapValue(Type & x, Type & y)
 {
     x ^=y;
     y ^=x;
@@ -34,14 +34,14 @@ void swapValue(Type & x, Type & x)
 template <typename Type>
 void selectionSort(Type* a, int start, int end)
 {
-    Type min;
     for (size_t i = start; i < end; i++)
     {
-        min = a[i];
-        for(size_t j = i + 1; j < end; j++)
+        int min = i;
+        for(size_t j = i + 1; j <= end; j++)
         {
-            if (min > a[j])swapValue(min, a[j]);
+            if (a[min] > a[j])min = j;
         }
+        swapValue(a[min], a[i]);
     }
 }
 
@@ -52,7 +52,7 @@ int main(int argc, char** argv)
     initArray(a, N);
     showArray(a, N);
     
-    selectionSort(a, 0, N);
+    selectionSort(a, 0, N-1);
     showArray(a, N);
     
     return 0;
