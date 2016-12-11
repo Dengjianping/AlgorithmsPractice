@@ -1,3 +1,4 @@
+# Working Experience
 1. 2011.7-2012.6. Pegatron: Worked as a product engineer, whose role is mainly for maintaining fixtures and verifying software upgrading, and SOP(standard operations).
 2. 2012.7-now. National Instruments: Working as test engineer, 
     1. ROME porting, then as one of contact after ROME abandoned, actually which is developed by American colleagues written by labview, teststand, batch, etc.
@@ -9,7 +10,7 @@
 I love machine learning, computer vision, 
 familiar with: python, c/c++, cuda, docker, git, OpenCV, Bootstrap/Jquery,some basic knowledge of Postgresql
 interested in: machine learning/cuda/computer vision.
-personal project experience: 
+# Personal project experience: 
     1. Use CUDA implement a multi-layers neural network.
     2. Use CUDA implement a convolutional NN algorithm.
     3. implemented a logistic regression/linear regression, KNN/K-means, etc.
