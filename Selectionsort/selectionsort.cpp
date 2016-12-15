@@ -41,7 +41,7 @@ void selectionSort(Type* a, int start, int end)
         {
             if (a[min] > a[j])min = j;
         }
-        swapValue(a[min], a[i]);
+        if (min != i) swapValue(a[min], a[i]);
     }
 }
 
