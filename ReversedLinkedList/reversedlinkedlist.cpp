@@ -13,14 +13,30 @@ struct LinkedList {
     type value;
     LinkedList* next;
     LinkedList() {
-        value = randUniform();
+        value = randUniform<type>();
         next = NULL;
     }
 };
 
 template <typename type>
-LinkedList<type>* createLinkedList(LinkedList<type>* head, int count) {
+LinkedList<type>* createNode() {
+    LinkedList<type>* node = new LinkedList<type>();
+    return node;
+}
+
+template <typename type>
+void recursiveCreateLinkedList(LinkedList<type>* x, const int N) {
+    static int count = 0;
+    if (count == N) return;
+    count++;
+    x->next = createNode<type>();
+    recursiveCreateLinkedList(x->next, N);
+}
+
+template <typename type>
+LinkedList<type>* createLinkedList(const int count) {
     LinkedList<type>* head = new LinkedList<type>();
+    LinkedList<type>* x = head;
     for (size_t i = 1; i < count; i++) {
         LinkedList<type>* t = new LinkedList<type>();
         x->next = t;
@@ -39,23 +55,27 @@ void visitLinkedList(LinkedList<type>* x) {
 template <typename type>
 int countNode(LinkedList<type>* x) {
     if (x == NULL) return 0;
-    return 1 + countNode(x->next)
+    return 1 + countNode(x->next);
 }
 
-template <typename type>
-void sortLinkedList(LinkedList<type>* x) {
-    LinkedList* t = x;
-    for (; x != NULL; x = x->next) {
-        for (LinkedList* y = x->next; y != NULL; y = y->next) {
+// template <typename type>
+// void sortLinkedList(LinkedList<type>* x) {
+    // LinkedList* t = x;
+    // for (; x != NULL; x = x->next) {
+        // for (LinkedList* y = x->next; y != NULL; y = y->next) {
             
-        }
-    }
-}
+        // }
+    // }
+// }
 
 int main() {
-    const in N = 5;
-    LinkedList<int>* head = createLinkedList(N);
+    const int N = 10;
+    // LinkedList<int>* head = createLinkedList<int>(N);
+    LinkedList<int>* head = createNode<int>();
+    recursiveCreateLinkedList(head, N);
     visitLinkedList(head);
+    
+    cout << endl << countNode(head) << endl;
     
     return 0;
 }
