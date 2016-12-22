@@ -58,15 +58,19 @@ int countNode(LinkedList<type>* x) {
     return 1 + countNode(x->next);
 }
 
-// template <typename type>
-// void sortLinkedList(LinkedList<type>* x) {
-    // LinkedList* t = x;
-    // for (; x != NULL; x = x->next) {
-        // for (LinkedList* y = x->next; y != NULL; y = y->next) {
-            
-        // }
-    // }
-// }
+template <typename type>
+void sortLinkedList(LinkedList<type>* x) {
+    LinkedList<type>* t = x;
+    for (; x != NULL; x = x->next) {
+        for (LinkedList<type>* y = x->next; y != NULL; y = y->next) {
+            if (x->value > y->value) {
+                int t = x->value;
+                x->value = y->value;
+                y->value = t;
+            }
+        }
+    }
+}
 
 int main() {
     const int N = 10;
@@ -74,8 +78,11 @@ int main() {
     LinkedList<int>* head = createNode<int>();
     recursiveCreateLinkedList(head, N);
     visitLinkedList(head);
+    cout << endl;
+    sortLinkedList(head);
+    visitLinkedList(head);
     
-    cout << endl << countNode(head) << endl;
+    cout << endl << "count nodes: " << countNode(head) << endl;
     
     return 0;
 }
