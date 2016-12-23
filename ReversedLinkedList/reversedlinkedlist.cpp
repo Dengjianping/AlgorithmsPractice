@@ -64,7 +64,7 @@ void sortLinkedList(LinkedList<type>* x) {
     for (; x != NULL; x = x->next) {
         for (LinkedList<type>* y = x->next; y != NULL; y = y->next) {
             if (x->value > y->value) {
-                int t = x->value;
+                type t = x->value;
                 x->value = y->value;
                 y->value = t;
             }
